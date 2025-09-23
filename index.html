@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rajini Tech — Superstar PC Components</title>
+  <meta name="description" content="Shop premium PC components with the power of a superstar! CPUs, GPUs, motherboards, RAM, storage and more. Rajinikanth approved tech that's simply superb!">
+  <meta name="theme-color" content="#d4af37">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Chakra+Petch:wght@500;700&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">🔥</div>
+        <div class="titles">
+          <h1 class="brand-name">Rajini Tech</h1>
+          <p class="brand-tag">Superstar approved. Simply superb!</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" class="btn btn-ghost" aria-label="Toggle theme">🌓</button>
+        <button id="cartOpen" class="btn btn-primary">
+          <span class="btn-label">Cart</span>
+          <span id="cartCount" class="badge">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="control control-search">
+        <input id="searchInput" type="search" placeholder="Search GPUs, CPUs, RAM…" aria-label="Search products">
+      </div>
+      <div class="control">
+        <label for="categorySelect">Category</label>
+        <select id="categorySelect" aria-label="Filter by category">
+          <option value="all">All</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="sortSelect">Sort</label>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="popularity">Most popular</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating-desc">Rating</option>
+          <option value="name-asc">Name A–Z</option>
+        </select>
+      </div>
+      <div class="control control-toggle">
+        <label class="switch">
+          <input id="inStockToggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <span>In-stock only</span>
+      </div>
+    </section>
+
+    <main class="content">
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Rajini Tech. Powered by superstar energy! 🚀</p>
+    </footer>
+  </div>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h2 id="cartTitle">Your Cart</h2>
+      <button id="cartClose" class="btn btn-ghost" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary btn-block">Checkout</button>
+    </div>
+  </aside>
+
+  <div id="drawerBackdrop" class="backdrop" hidden></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
+
+
